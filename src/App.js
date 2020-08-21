@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Cards from './Cards';
+
+const goodArr = [
+  {
+    goodsNm: 'good book',
+    goodsNo: 1231,
+    thumbnail: 'https://i.ytimg.com/vi/IWRym7cNLXY/maxresdefault.jpg'
+  },
+  {
+    goodsNm: 'exquisite cheese',
+    goodsNo: 1242,
+    thumbnail: 'https://i.ytimg.com/vi/IWRym7cNLXY/maxresdefault.jpg'
+  },
+  {
+    goodsNm: 'tropical fruits',
+    goodsNo: 2232,
+    thumbnail: 'https://i.ytimg.com/vi/IWRym7cNLXY/maxresdefault.jpg'
+  }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+           <Cards goodArr={goodArr}/>
+
     </div>
   );
 }
